@@ -1,0 +1,9 @@
+.app-layout {
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 240px;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+}

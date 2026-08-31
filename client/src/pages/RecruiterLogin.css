@@ -1,0 +1,203 @@
+.recruiter-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 30px 15px;
+}
+
+.recruiter-login-card {
+  width: 100%;
+  max-width: 600px;
+  background: #2d2d2d;
+  padding: 32px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.recruiter-login-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.recruiter-login-header h1 {
+  margin: 0;
+  color: #f1f1f1;
+  font-size: 32px;
+}
+
+.recruiter-login-header p {
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.recruiter-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recruiter-login-form-group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.recruiter-login-form-group label {
+  color: #c5c5c5;
+  font-size: 15px;
+  text-align: right;
+}
+
+.recruiter-login-form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: #242424;
+  color: #eee;
+  font-size: 15px;
+  outline: none;
+}
+
+.recruiter-login-form-group input:focus {
+  border-color: #777;
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.popup-content {
+  width: 350px;
+  background: #292929;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+
+  animation: popupAppear 0.25s ease;
+}
+
+.popup-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.popup-content.success .popup-icon {
+  background: #1f7a3d;
+  color: white;
+}
+
+.popup-content.error .popup-icon {
+  background: #b83232;
+  color: white;
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.popup-content p {
+  color: #cfcfcf;
+  margin-bottom: 22px;
+}
+
+.popup-content button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 10px 28px;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  background: white;
+  color: #222;
+}
+
+.popup-content button:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.recruiter-login-btn {
+  width: 30%; /* adjust if needed */
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recruiter-login-btn:hover {
+  background: #28a745;
+  color: white;
+}
+
+.recruiter-login-links {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.recruiter-login-links p {
+  color: #aaa;
+  margin: 7px 0;
+}
+
+.recruiter-login-links span {
+  color: #a99cff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recruiter-login-links span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .recruiter-login-card {
+    padding: 28px 22px;
+  }
+}

@@ -1,0 +1,165 @@
+.ai-mentor-page {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* Header */
+
+.ai-mentor-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.ai-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  background: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-mentor-header h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+}
+
+.ai-mentor-header p {
+  margin: 0;
+  color: #777;
+}
+
+/* Chat Container */
+
+.chat-container {
+  height: 600px;
+  background: #292929;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Messages */
+
+.chat-messages {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.message {
+  display: flex;
+  gap: 12px;
+  max-width: 75%;
+  align-items: flex-start;
+}
+
+.ai-message {
+  align-self: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+/* Icons */
+
+.message-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Message Bubble */
+
+.message-text {
+  background: #383838;
+  padding: 13px 17px;
+  border-radius: 14px;
+  line-height: 1.7;
+  color: #eee;
+  white-space: pre-wrap;
+}
+.ai-message .message-text {
+  text-align: left;
+}
+
+.user-message .message-text {
+  background: #444;
+  white-space: pre-wrap;
+}
+
+/* Input */
+
+.chat-input {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  border-top: 1px solid #444;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-input input:focus {
+  border-color: #777;
+}
+
+.chat-input button {
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #3d3d3d;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-input button:hover {
+  background: #555;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .ai-mentor-page {
+    width: 95%;
+    margin: 25px auto;
+  }
+
+  .ai-mentor-header h1 {
+    font-size: 25px;
+  }
+
+  .chat-container {
+    height: 550px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+}

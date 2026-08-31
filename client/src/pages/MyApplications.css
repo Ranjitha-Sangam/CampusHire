@@ -1,0 +1,175 @@
+/* MY APPLICATIONS */
+.my-applications {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 10px 20px 40px;
+}
+/* Header */
+
+.my-applications-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.my-applications-header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.my-applications-header p {
+  color: black;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Applications Grid */
+
+.my-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Application Card */
+
+.my-application-card {
+  background: #292929;
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease;
+}
+
+.my-application-card:hover {
+  transform: translateY(-15px);
+}
+/* Company */
+
+.application-company {
+  border-bottom: 1px solid #444;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.application-company h2 {
+  margin: 0 0 6px;
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.application-company p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 16px;
+}
+/* Job Details */
+
+.application-details {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 22px;
+}
+
+.application-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.application-details span {
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.application-details strong {
+  font-size: 13px;
+  color: wheat;
+}
+/* Status */
+
+.my-application-card .application-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border: 1px solid white;
+}
+
+.my-application-card .application-status span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.my-application-card .application-status strong {
+  font-size: 15px;
+}
+/* Status Colors */
+
+.status-applied {
+  color: #f0c674;
+}
+
+.status-shortlisted {
+  color: #61d394;
+}
+
+.status-interview {
+  color: #64b5f6;
+}
+
+.status-selected {
+  color: #66bb6a;
+}
+
+.status-rejected {
+  color: #ef6c6c;
+}
+/* Applied Date */
+
+.applied-date {
+  margin-top: 16px;
+  color: #999;
+  font-size: 13px;
+}
+
+/* Empty State */
+
+.empty-applications {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.empty-applications h2 {
+  margin-bottom: 8px;
+}
+
+.empty-applications p {
+  color: #999;
+}
+/* Loading */
+
+.applications-loading {
+  text-align: center;
+  margin-top: 50px;
+}
+/* Responsive */
+
+@media (max-width: 800px) {
+  .my-applications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .my-applications {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .my-applications-header h1 {
+    font-size: 28px;
+  }
+
+  .application-details {
+    gap: 30px;
+  }
+}

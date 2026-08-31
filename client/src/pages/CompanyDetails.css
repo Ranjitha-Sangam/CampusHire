@@ -1,0 +1,501 @@
+.company-details-page {
+  width: 90%;
+  max-width: 1050px;
+  margin: 35px auto 60px;
+}
+
+/* Back Button */
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  padding: 10px 16px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #292929;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #3a3a3a;
+  transform: translateX(-3px);
+}
+
+/* Main Card */
+
+.company-details-card {
+  background: #292929;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid #3d3d3d;
+}
+
+/* Header */
+
+.company-details-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #444;
+}
+
+.company-logo {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #3a3a3a;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.company-details-header h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  color: white;
+}
+
+.company-details-header p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #bdbdbd;
+  font-size: 17px;
+}
+
+/* Info Grid */
+
+.company-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.company-info-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #1f1f1f;
+  border: 1px solid #3d3d3d;
+}
+
+.info-icon {
+  width: 28px;
+  height: 28px;
+  color: #cfcfcf;
+}
+
+.company-info-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.company-info-box span {
+  color: #999;
+  font-size: 13px;
+}
+
+.company-info-box strong {
+  color: white;
+  font-size: 16px;
+}
+
+/* Sections */
+
+.details-section {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #444;
+}
+
+.details-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 21px;
+  color: white;
+}
+
+/* Branches */
+
+.branch-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.branch-tag {
+  padding: 9px 16px;
+  border-radius: 20px;
+  background: #383838;
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+/* Skills */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  padding: 9px 16px;
+  border-radius: 20px;
+  background: #383838;
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+/* Job Description */
+
+.job-description p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.not-provided {
+  color: #999;
+}
+
+/* Loading */
+
+.company-details-loading {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Not Found */
+
+.company-not-found {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.company-not-found button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #292929;
+  color: white;
+  cursor: pointer;
+}
+
+.apply-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0 15px;
+}
+
+.apply-btn {
+  width: 220px;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #222;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background: #e5e5e5;
+}
+
+.apply-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.application-message {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #8bcf9b;
+}
+.apply-btn.applied {
+  background: #2e7d32;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.apply-btn.applied:hover {
+  background: #2e7d32;
+  transform: none;
+}
+
+.deadline-error {
+  color: red;
+  font-weight: bold;
+  font-size: large;
+}
+/* Placement Mentor */
+
+.placement-mentor-action {
+  margin-top: 35px;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  display: flex;
+  justify-content: center;
+}
+
+.placement-mentor-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 14px 25px;
+  background: #3a3a3a;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.placement-mentor-btn:hover:not(:disabled) {
+  background: #4a4a4a;
+  transform: translateY(-2px);
+}
+
+.placement-mentor-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  width: 360px;
+  padding: 30px;
+  border-radius: 18px;
+  background: #292929;
+  border: 1px solid #444;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.popup-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #3a2020;
+  color: #ff4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.popup-box h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  color: #bdbdbd;
+  margin-bottom: 25px;
+}
+
+.popup-box button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+/* AI Result */
+
+.mentor-result {
+  margin-top: 35px;
+  padding: 30px;
+  border-radius: 16px;
+  background: #1f1f1f;
+  border: 1px solid #444;
+}
+
+.mentor-result > h2 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+/* Placement Probability */
+
+.placement-probability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+  background: #292929;
+  border: 1px solid #444;
+}
+
+.placement-probability span {
+  color: #aaa;
+  font-size: 15px;
+}
+
+.placement-probability strong {
+  margin-top: 8px;
+  color: white;
+  font-size: 38px;
+}
+
+/* Eligibility Status */
+
+.apply-status {
+  text-align: center;
+  padding: 14px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.should-apply {
+  background: rgba(97, 211, 148, 0.12);
+  color: #61d394;
+  border: 1px solid rgba(97, 211, 148, 0.3);
+}
+
+.not-recommended {
+  background: rgba(239, 108, 108, 0.12);
+  color: #ef6c6c;
+  border: 1px solid rgba(239, 108, 108, 0.3);
+}
+
+/* Mentor Sections */
+
+.mentor-section {
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid #444;
+}
+
+.mentor-section h3 {
+  margin: 0 0 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.mentor-section ul,
+.mentor-section ol {
+  margin: 0;
+  padding-left: 22px;
+  color: #cfcfcf;
+}
+
+.mentor-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Missing Skills */
+
+.mentor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mentor-tags span {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #383838;
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+/* AI Assessment */
+
+.mentor-reason {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #292929;
+  border: 2px solid grey;
+}
+
+.mentor-reason h3 {
+  margin: 0 0 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.mentor-reason p {
+  margin: 0;
+  color: #cfcfcf;
+  line-height: 2;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .company-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-details-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .company-details-page {
+    width: 95%;
+  }
+
+  .company-details-header {
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+  .company-details-header h1 {
+    font-size: 25px;
+  }
+}

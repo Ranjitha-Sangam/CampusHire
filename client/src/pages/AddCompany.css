@@ -1,0 +1,129 @@
+/* ADD COMPANY PAGE */
+
+.add-company-page {
+  width: 90%;
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 10px 20px 50px;
+}
+
+.add-company-container {
+  background: #292929;
+  border-radius: 18px;
+  padding: 35px 40px;
+}
+
+/* Header */
+
+.add-company-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.add-company-container > p {
+  text-align: center;
+  color: #bdbdbd;
+  margin-bottom: 35px;
+}
+
+/* Form */
+
+.add-company-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs */
+
+.add-company-container input,
+.add-company-container textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #1f1f1f;
+  color: white;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.add-company-container textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Placeholder */
+
+.add-company-container input::placeholder,
+.add-company-container textarea::placeholder {
+  color: #888;
+}
+
+/* Focus */
+
+.add-company-container input:focus,
+.add-company-container textarea:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* Button */
+
+.add-company-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 11px 20px;
+  background: #292929;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-company-button:hover {
+  background: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.add-company-container button {
+  margin-top: 10px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.add-company-container button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .add-company-page {
+    width: 95%;
+    padding: 10px 5px 40px;
+  }
+
+  .add-company-container {
+    padding: 25px 20px;
+  }
+
+  .add-company-container h1 {
+    font-size: 28px;
+  }
+}

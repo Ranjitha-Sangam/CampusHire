@@ -1,0 +1,298 @@
+.recruiter-dashboard {
+  min-height: 100vh;
+  padding: 40px 50px;
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+/* HEADER */
+
+.recruiter-header {
+  margin-bottom: 30px;
+}
+
+.recruiter-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.recruiter-header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* OA SECTION */
+
+.oa-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.oa-section h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.oa-section p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.oa-form {
+  display: flex;
+  gap: 10px;
+  min-width: 430px;
+}
+
+.oa-form input {
+  flex: 1;
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.oa-form input:focus {
+  border-color: #2563eb;
+}
+
+.oa-form button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 18px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.oa-form button:hover {
+  background: #1d4ed8;
+}
+
+/* APPLICANTS SECTION */
+
+.applications-heading {
+  margin-bottom: 18px;
+}
+
+.applications-heading h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.applications-heading p {
+  margin: 5px 0 0;
+  color: #6b7280;
+}
+
+/* TABLE */
+
+.applications-table {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1.4fr 1.8fr 1.2fr 1.2fr 0.8fr;
+
+  padding: 15px 25px;
+
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.application-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.8fr 1.2fr 1.2fr 0.8fr;
+
+  align-items: center;
+
+  padding: 20px 25px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  transition: background 0.2s;
+}
+
+.application-row:last-child {
+  border-bottom: none;
+}
+
+.application-row:hover {
+  background: #f9fafb;
+}
+
+/* STUDENT */
+
+.student-column {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e0e7ff;
+  color: #3730a3;
+
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.student-column h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.student-column p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact-column p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+/* ACADEMIC */
+
+.academic-column p {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.academic-column span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* JOB */
+
+.job-column h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.job-column p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* STATUS */
+
+.application-status {
+  display: inline-block;
+
+  padding: 7px 12px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+/* Different status styles */
+
+.application-status.applied {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.application-status.oa-sent {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.application-status.selected {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.application-status.rejected {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* NO APPLICATIONS */
+
+.no-applications {
+  background: white;
+  padding: 50px;
+  border-radius: 14px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .recruiter-dashboard {
+    padding: 25px;
+  }
+
+  .oa-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .oa-form {
+    min-width: 0;
+  }
+
+  .applications-table {
+    overflow-x: auto;
+  }
+
+  .table-header,
+  .application-row {
+    min-width: 850px;
+  }
+}
