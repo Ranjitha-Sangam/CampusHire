@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import RecruiterRegister from "./pages/RecruiterRegister";
@@ -27,7 +27,7 @@ function App() {
   return (
     <Routes>
       {/* Public pages - NO SIDEBAR */}
-      <Route path="/" element={<h1>CampusHire Home</h1>} />
+      <Route path="/" element={<Navigate to="/login" replace />} />{" "}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/recruiter/register" element={<RecruiterRegister />} />
@@ -42,7 +42,6 @@ function App() {
           </RecruiterProtectedRoute>
         }
       />
-
       {/* Protected pages - WITH SIDEBAR */}
       <Route
         element={
