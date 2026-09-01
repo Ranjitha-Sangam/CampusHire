@@ -15,7 +15,7 @@ const aiMentorRoutes = require("./routes/aiMentorRoutes");
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
   }),
 );
 app.use(express.json());
@@ -23,7 +23,7 @@ app.use(express.json());
 const createStudent = async () => {
   try {
     await connectDB();
-    const PORT = process.env.PORT;
+    const PORT = process.env.PORT || 5000;
 
     app.get("/", (req, res) => {
       res.send("Welcome to CampusHire API  v2");
@@ -48,7 +48,7 @@ const createStudent = async () => {
       //Ai-mentor
     app.use("/api/ai-mentor", aiMentorRoutes);
 
-    app.listen(PORT, () => {
+    app.listen(PORT,"0.0.0.0", () => {
       console.log(`Server is running on http://localhost:${PORT}`);
     });
   } catch (error) {
