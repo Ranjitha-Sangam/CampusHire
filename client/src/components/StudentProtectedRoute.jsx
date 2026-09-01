@@ -36,7 +36,7 @@ function StudentProtectedRoute({ children }) {
   }
 
   if (!isStudent) {
-    return <Navigate to="/admin/dashboard" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   return children;

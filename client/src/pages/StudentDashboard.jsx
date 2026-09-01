@@ -65,6 +65,7 @@ function StudentDashboard() {
           const dashboardResponse = await getAdminDashboard(token);
 
           setDashboard(dashboardResponse.data);
+          await fetchPendingRecruiters();
         } else {
           const [companiesResponse, applicationsResponse, recommendedResponse] =
             await Promise.all([
@@ -88,7 +89,7 @@ function StudentDashboard() {
     fetchData();
 
     // Fetch pending recruiter requests
-    fetchPendingRecruiters();
+    // fetchPendingRecruiters();
   }, []);
 
   if (!student) {
@@ -131,7 +132,6 @@ function StudentDashboard() {
             <span>Manage students, companies and applications.</span>
           </div>
 
-    
           {dashboard && (
             <>
               {/* Overview */}

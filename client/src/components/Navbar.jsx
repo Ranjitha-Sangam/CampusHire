@@ -6,6 +6,7 @@ import "./Navbar.css";
 function Navbar() {
   const navigate = useNavigate();
   const [role, setRole] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const fetchRole = async () => {
@@ -32,42 +33,84 @@ function Navbar() {
     navigate("/login");
   };
 
+  const handleNavigation = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <aside className="sidebar">
-      <div className="sidebar-logo">
+    <>
+      {/* Mobile top bar */}
+      <div className="mobile-header">
         <h2>CampusHiree</h2>
-        <p>{role === "admin" ? "Admin Portal" : "Student Portal"}</p>
+
+        <button
+          className="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
       </div>
 
-      <nav className="sidebar-links">
-        {role === "student" && (
-          <>
-            <NavLink to="/dashboard">Dashboard</NavLink>
+      {/* Sidebar */}
+      <aside className={`sidebar ${menuOpen ? "sidebar-open" : ""}`}>
+        <div className="sidebar-logo">
+          <h2>CampusHiree</h2>
+          <p>{role === "admin" ? "Admin Portal" : "Student Portal"}</p>
+        </div>
 
-            <NavLink to="/profile">My Profile</NavLink>
+        <nav className="sidebar-links">
+          {role === "student" && (
+            <>
+              <NavLink to="/dashboard" onClick={handleNavigation}>
+                Dashboard
+              </NavLink>
 
-            <NavLink to="/companies">Companies</NavLink>
+              <NavLink to="/profile" onClick={handleNavigation}>
+                My Profile
+              </NavLink>
 
-            <NavLink to="/my-applications">My Applications</NavLink>
+              <NavLink to="/companies" onClick={handleNavigation}>
+                Companies
+              </NavLink>
 
-            <NavLink to="/ai-mentor">AI Mentor</NavLink>
-          </>
-        )}
+              <NavLink to="/my-applications" onClick={handleNavigation}>
+                My Applications
+              </NavLink>
 
-        {role === "admin" && (
-          <>
-            <NavLink to="/admin/dashboard">Dashboard</NavLink>
+              <NavLink to="/ai-mentor" onClick={handleNavigation}>
+                AI Mentor
+              </NavLink>
+            </>
+          )}
 
-            <NavLink to="/admin/applications">Applications</NavLink>
+          {role === "admin" && (
+            <>
+              <NavLink to="/admin/dashboard" onClick={handleNavigation}>
+                Dashboard
+              </NavLink>
 
-            <NavLink to="/admin/companies">Companies</NavLink>
-          </>
-        )}
-      </nav>
-      <button className="logout-btn" onClick={handleLogout}>
-        Logout
-      </button>
-    </aside>
+              <NavLink to="/admin/applications" onClick={handleNavigation}>
+                Applications
+              </NavLink>
+
+              <NavLink to="/admin/companies" onClick={handleNavigation}>
+                Companies
+              </NavLink>
+            </>
+          )}
+        </nav>
+
+        <button className="logout-btn" onClick={handleLogout}>
+          Logout
+        </button>
+      </aside>
+
+      {/* Dark overlay on mobile */}
+      {menuOpen && (
+        <div className="sidebar-overlay" onClick={() => setMenuOpen(false)} />
+      )}
+    </>
   );
 }
 

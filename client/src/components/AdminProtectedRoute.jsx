@@ -36,7 +36,7 @@ function AdminProtectedRoute({ children }) {
   }
 
   if (!isAdmin) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   return children;
